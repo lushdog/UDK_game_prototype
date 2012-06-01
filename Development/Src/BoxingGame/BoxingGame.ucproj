@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <ProductVersion>1.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7248257a-3a97-480e-94f9-50aecf9b7433}</ProjectGuid>
+    <OutputType>UserMod</OutputType>
+    <ProjectType>UnrealScript</ProjectType>
+    <RootNamespace>BoxingGame</RootNamespace>
+    <AssemblyName>BoxingGame</AssemblyName>
+    <Name>BoxingGame</Name>
+    <TargetGame>UnrealEngine 3 Licensee</TargetGame>
+    <BaseContentPath>..\..\Engine\Content</BaseContentPath>
+    <GameContentPath>..\..\UDKGame\Content</GameContentPath>
+    <PackageExtensions>.upk;.udk</PackageExtensions>
+    <UccPath>..\..\..\Binaries\Win32\UDK.exe</UccPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>True</ForceWindowedMode>
+    <WindowWidth>1024</WindowWidth>
+    <WindowHeight>768</WindowHeight>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <UccUseUnpublished>False</UccUseUnpublished>
+    <UseUnpublished>False</UseUnpublished>
+    <ForceWindowedMode>False</ForceWindowedMode>
+    <ShowLogWindow>False</ShowLogWindow>
+    <LogToFile>False</LogToFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="*\Classes\*.uc" />
+    <Compile Include="Classes\BGFight.uc" />
+    <Compile Include="Classes\BoxingPC.uc" />
+    <Content Include="**\*.uci" />
+  </ItemGroup>
+  <ItemGroup>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultEditorUserSettings.ini">
+      <Link>UDKGame\Config\DefaultEditorUserSettings.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultEngine.ini">
+      <Link>UDKGame\Config\DefaultEngine.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultEngineUDK.ini">
+      <Link>UDKGame\Config\DefaultEngineUDK.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultGame.ini">
+      <Link>UDKGame\Config\DefaultGame.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultGameUDK.ini">
+      <Link>UDKGame\Config\DefaultGameUDK.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultInput.ini">
+      <Link>UDKGame\Config\DefaultInput.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultInputDefaults.ini">
+      <Link>UDKGame\Config\DefaultInputDefaults.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultLightmass.ini">
+      <Link>UDKGame\Config\DefaultLightmass.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultUI.ini">
+      <Link>UDKGame\Config\DefaultUI.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultWeapon.ini">
+      <Link>UDKGame\Config\DefaultWeapon.ini</Link>
+    </Config>
+    <Config Include="..\..\..\..\UDKGame\Config\DefaultWeaponDefaults.ini">
+      <Link>UDKGame\Config\DefaultWeaponDefaults.ini</Link>
+    </Config>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes" />
+    <Folder Include="UDKGame\" />
+    <Folder Include="UDKGame\Config\" />
+  </ItemGroup>
+  <Import Condition="'$(MSBuildExtensionsPath32)' != ''" Project="$(MSBuildExtensionsPath32)\PixelMine\UnrealScript.targets" />
+  <Import Condition="'$(MSBuildExtensionsPath32)' == ''" Project="$(MSBuildExtensionsPath)\PixelMine\UnrealScript.targets" />
+</Project>

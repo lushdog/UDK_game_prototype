@@ -1,0 +1,14 @@
+C:\UDK\UDK-2012-05\UDKGame\Script\Core.u
+C:\UDK\UDK-2012-05\UDKGame\Script\Engine.u
+C:\UDK\UDK-2012-05\UDKGame\Script\IpDrv.u
+C:\UDK\UDK-2012-05\UDKGame\Script\GFxUI.u
+C:\UDK\UDK-2012-05\UDKGame\Script\GameFramework.u
+C:\UDK\UDK-2012-05\UDKGame\Script\UnrealEd.u
+C:\UDK\UDK-2012-05\UDKGame\Script\GFxUIEditor.u
+C:\UDK\UDK-2012-05\UDKGame\Script\WinDrv.u
+C:\UDK\UDK-2012-05\UDKGame\Script\OnlineSubsystemPC.u
+C:\UDK\UDK-2012-05\UDKGame\Script\OnlineSubsystemSteamworks.u
+C:\UDK\UDK-2012-05\UDKGame\Script\OnlineSubsystemGameCenter.u
+C:\UDK\UDK-2012-05\UDKGame\Script\UDKBase.u
+C:\UDK\UDK-2012-05\UDKGame\Script\UTEditor.u
+C:\UDK\UDK-2012-05\UDKGame\Script\BoxingGame.u

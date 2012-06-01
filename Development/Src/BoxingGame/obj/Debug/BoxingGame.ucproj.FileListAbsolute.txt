@@ -1,0 +1,2 @@
+C:\UDK\UDK-2012-05\Development\Src\BoxingGame\obj\Debug\BoxingGame.ucproj.UnrealScriptGeneratedFileListAbsolute.txt
+C:\UDK\UDK-2012-05\Development\Src\BoxingGame\obj\BoxingGame.ucproj.UnrealScriptConfigurationLog.txt
