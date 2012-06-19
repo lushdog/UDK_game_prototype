@@ -86,16 +86,16 @@ state FightHasEnded
 {
 
 Begin:
-	`Log("[BGFight] Entered FightHasEnded state.");
+	//`Log("[BGFight] Entered FightHasEnded state.");
 }
 
 state RoundInProgress
 {
 	function Timer()
 	{
-		`Log("[BGFight] Time remaining in round is " $GameReplicationInfo.RemainingTime);
-		`Log("[BGFight] Current round is " $currentRound);
-		`Log("[BGFight] Player controller is in state " $playerController.GetStateName());
+		//`Log("[BGFight] Time remaining in round is " $GameReplicationInfo.RemainingTime);
+		//`Log("[BGFight] Current round is " $currentRound);
+		//`Log("[BGFight] Player controller is in state " $playerController.GetStateName());
 		
 		Global.Timer();
 
@@ -113,7 +113,7 @@ state RoundInProgress
 	}
 
 Begin:
-	`Log("[BGFight] Entered RoundInProgress state.");
+	//`Log("[BGFight] Entered RoundInProgress state.");
 }
 
 //@todo: add state for round has ended
