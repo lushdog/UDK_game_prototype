@@ -12,6 +12,7 @@ var int currentRound;
 var int roundLengthInSeconds;
 var int secondsRemainingInRound;
 var PlayerController playerController;
+var bool bFightHasStarted;
 
 event InitGame( string Options, out string ErrorMessage )
 {
@@ -25,19 +26,22 @@ event PreLogin(string Options, string Address, const UniqueNetId UniqueId, bool 
 
 event PlayerController Login(string Portal, string Options, const UniqueNetID UniqueID, out string ErrorMessage)
 {
-	playerController = Super.Login(Portal, Options, UniqueID, ErrorMessage);
-	return playerController;
+	local PlayerController newPlayer;
+	newPlayer = Super.Login(Portal, Options, UniqueID, ErrorMessage);
+	return newPlayer;
 }
 
 event PostLogin( PlayerController NewPlayer )
 {
 	Super.PostLogin(NewPlayer);
+	playerController = NewPlayer;
+	SetRoundTimeAndStartRound();
+	bFightHasStarted = true;
 }
 
 function StartMatch()
 {
-	Super.StartMatch();
-	SetRoundTimeAndStartRound();
+	Super.StartMatch();	
 }
 
 function Reset()
@@ -46,15 +50,15 @@ function Reset()
 	SetRoundTimeAndStartRound();
 }
 
-function Timer()
+function Timer() 
 {
-	
 }
 
 function SetRoundTimeAndStartRound()
 {
 	//reset timelimit
 	//TimeLimit = roundLengthInSeconds / 60; //@todo, should be loaded in GameInfo.uc with GetOptionsInt()?
+	//`Log("[BGFight] SetRoundTimeAndStartRound()");
 	GameReplicationInfo.RemainingTime = roundLengthInSeconds;
 	playerController.GotoState('Idle');
 	
@@ -122,9 +126,11 @@ defaultproperties
 {
 	PlayerControllerClass=class'BoxingGame.BoxingPC';
 
-	bDelayedStart=false;
-	bWaitingToStartMatch=true;
+	//bDelayedStart=false;
+	//bWaitingToStartMatch=true;
 
+	bFightHasStarted = false;
+	
 	numberOfRounds = 3;
 	currentRound = 1;	
 	roundLengthInSeconds = 10;

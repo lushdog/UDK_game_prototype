@@ -5,21 +5,7 @@ Project("{E17AB4A1-DF35-4579-9E91-0CFFBFB6391A}") = "BoxingGame", "BoxingGame.uc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{3B8CB258-7891-442E-A518-784AEADF2D7F}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\UDKGame\Config\DefaultCompat.ini = ..\..\..\UDKGame\Config\DefaultCompat.ini
-		..\..\..\UDKGame\Config\DefaultEditor.ini = ..\..\..\UDKGame\Config\DefaultEditor.ini
-		..\..\..\UDKGame\Config\DefaultEditorKeyBindings.ini = ..\..\..\UDKGame\Config\DefaultEditorKeyBindings.ini
-		..\..\..\UDKGame\Config\DefaultEditorUDK.ini = ..\..\..\UDKGame\Config\DefaultEditorUDK.ini
-		..\..\..\UDKGame\Config\DefaultEditorUserSettings.ini = ..\..\..\UDKGame\Config\DefaultEditorUserSettings.ini
-		..\..\..\UDKGame\Config\DefaultEngine.ini = ..\..\..\UDKGame\Config\DefaultEngine.ini
-		..\..\..\UDKGame\Config\DefaultEngineUDK.ini = ..\..\..\UDKGame\Config\DefaultEngineUDK.ini
-		..\..\..\UDKGame\Config\DefaultGame.ini = ..\..\..\UDKGame\Config\DefaultGame.ini
-		..\..\..\UDKGame\Config\DefaultGameUDK.ini = ..\..\..\UDKGame\Config\DefaultGameUDK.ini
 		..\..\..\UDKGame\Config\DefaultInput.ini = ..\..\..\UDKGame\Config\DefaultInput.ini
-		..\..\..\UDKGame\Config\DefaultInputDefaults.ini = ..\..\..\UDKGame\Config\DefaultInputDefaults.ini
-		..\..\..\UDKGame\Config\DefaultLightmass.ini = ..\..\..\UDKGame\Config\DefaultLightmass.ini
-		..\..\..\UDKGame\Config\DefaultUI.ini = ..\..\..\UDKGame\Config\DefaultUI.ini
-		..\..\..\UDKGame\Config\DefaultWeapon.ini = ..\..\..\UDKGame\Config\DefaultWeapon.ini
-		..\..\..\UDKGame\Config\DefaultWeaponDefaults.ini = ..\..\..\UDKGame\Config\DefaultWeaponDefaults.ini
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{DD034E79-3DD1-4C8A-ACA7-194F6D8D2FEF}"
