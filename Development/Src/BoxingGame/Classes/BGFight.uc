@@ -125,6 +125,7 @@ Begin:
 defaultproperties
 {
 	PlayerControllerClass=class'BoxingGame.BoxingPC';
+	
 
 	//bDelayedStart=false;
 	//bWaitingToStartMatch=true;

@@ -27,7 +27,7 @@ var string currentMove;
 
 exec function LeftJab()
 {
-	AttemptPunch("LeftJab");
+	AttemptPunch("LeftJab"); //@TODO: LeftJab() and RightJab() action will be recover buttons if knocked down
 }
 
 exec function RightJab()
@@ -50,7 +50,7 @@ function bool AttemptPunch(string punchType)  //@TODO:all Attempt* functions cou
 	local bool canPunch;
 	canPunch = false;
 
-	if (!bIsPunching && !bIsBlocking && !bIsMoving)
+	if (!bIsPunching && !bIsBlocking && !bIsMoving && !bIsStunned)
 	{
 		currentPunch = punchType;
 		GotoState('Punching');
@@ -110,7 +110,7 @@ function bool AttemptBlock(string blockType)
 	local bool canBlock;
 	canBlock = false;
 
-	if (!bIsPunching && !bIsBlocking && !bIsMoving)
+	if (!bIsPunching && !bIsBlocking && !bIsMoving && !bIsStunned)
 	{
 		currentBlock = blockType;
 		GotoState('Blocking');
@@ -162,7 +162,7 @@ function bool AttemptMove(string moveType)
 	local bool canMove;
 	canMove = false;
 
-	if (!bIsPunching && !bIsBlocking && !bIsMoving)
+	if (!bIsPunching && !bIsBlocking && !bIsMoving && !bIsStunned)
 	{
 		currentMove = moveType;
 		GotoState('Moving');
@@ -197,8 +197,8 @@ Begin:
 	goto 'UnHittable';
 }
 
-//@todo, add some states (which should be subclassed to be reused by AI)
-//add HUD and call DisplayDebug stuff
+
+//@TODO: add HUD and call DisplayDebug stuff
 
 auto state Idle
 {
@@ -210,8 +210,28 @@ Begin:
 	//goto 'Begin';
 }
 
-//@TODO:stunned state after punch
-//@TODO:knockdown state (can't punch, other boxer can't punch (is Idle))
+state Stunned 
+{
+
+EndStun:
+	bIsStunned = false;
+	GotoState('Idle');
+
+Begin:
+	sleep(0.1);
+}
+
+state KnockedDown
+{
+
+EndKnockedDown:
+	
+	bIsKnockedDown = false;
+	GotoState('Idle');
+
+Begin:
+	sleep(1.0);
+}
 
 defaultproperties
 {
